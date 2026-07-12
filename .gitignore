@@ -30,5 +30,3 @@ yarn-debug.log*
 yarn-error.log*
 .vercel
 *.tsbuildinfo
-
-README.md
