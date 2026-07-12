@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+ :root {
+ --background: 0 0% 100%;
+ --foreground: 222 47% 11%;
+ --card: 0 0% 100%;
+ --card-foreground: 222 47% 11%;
+ --popover: 0 0% 100%;
+ --popover-foreground: 222 47% 11%;
+ --primary: 30 95% 44%;
+ --primary-foreground: 0 0% 100%;
+ --secondary: 210 40% 96%;
+ --secondary-foreground: 222 47% 11%;
+ --muted: 210 40% 96%;
+ --muted-foreground: 215 16% 47%;
+ --accent: 210 40% 94%;
+ --accent-foreground: 222 47% 11%;
+ --destructive: 0 72% 51%;
+ --destructive-foreground: 0 0% 100%;
+ --success: 142 71% 40%;
+ --success-foreground: 0 0% 100%;
+ --warning: 38 92% 50%;
+ --warning-foreground: 0 0% 10%;
+ --border: 214 32% 88%;
+ --input: 214 32% 88%;
+ --ring: 30 95% 44%;
+ --radius: 0.6rem;
+ }
+
+ .dark {
+ --background: 222 24% 5%;
+ --foreground: 210 40% 98%;
+ --card: 222 22% 8%;
+ --card-foreground: 210 40% 98%;
+ --popover: 222 22% 7%;
+ --popover-foreground: 210 40% 98%;
+ --primary: 32 95% 44%;
+ --primary-foreground: 0 0% 100%;
+ --secondary: 217 19% 15%;
+ --secondary-foreground: 210 40% 98%;
+ --muted: 217 19% 14%;
+ --muted-foreground: 217 15% 62%;
+ --accent: 217 19% 18%;
+ --accent-foreground: 210 40% 98%;
+ --destructive: 0 72% 51%;
+ --destructive-foreground: 0 0% 100%;
+ --success: 142 65% 45%;
+ --success-foreground: 0 0% 100%;
+ --warning: 38 92% 50%;
+ --warning-foreground: 0 0% 10%;
+ --border: 217 19% 20%;
+ --input: 217 19% 20%;
+ --ring: 32 95% 44%;
+ --radius: 0.6rem;
+ }
+}
+
+@layer base {
+ * {
+ border-color: hsl(var(--border));
+ }
+ body {
+ background-color: hsl(var(--background));
+ color: hsl(var(--foreground));
+ font-feature-settings: "rlig" 1, "calt" 1;
+ }
+ html {
+ -webkit-font-smoothing: antialiased;
+ }
+}
+
+@layer utilities {
+ .scrollbar-thin::-webkit-scrollbar {
+ width: 8px;
+ height: 8px;
+ }
+ .scrollbar-thin::-webkit-scrollbar-thumb {
+ background-color: hsl(var(--border));
+ border-radius: 9999px;
+ }
+ .scrollbar-thin::-webkit-scrollbar-track {
+ background-color: transparent;
+ }
+}
